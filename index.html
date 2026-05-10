@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Mother's Day</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  background:linear-gradient(135deg,#fdf0f7 0%,#f7e8f5 50%,#fce8f0 100%);
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2rem 1rem 3rem;
+  font-family:'Lato',sans-serif;
+}
+.scene{display:flex;flex-direction:column;align-items:center;gap:1.6rem;}
+
+/* Card sized to match image aspect ratio 1402/1122 = 1.2495 */
+.card-scene{perspective:1400px;width:560px;height:448px;position:relative;}
+.card{
+  width:560px;height:448px;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform 1.2s cubic-bezier(0.77,0,0.175,1);
+  cursor:pointer;
+}
+.card.open{transform:rotateY(-180deg);}
+.face{
+  position:absolute;width:100%;height:100%;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:6px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(160,60,100,0.2),0 2px 8px rgba(160,60,100,0.12);
+}
+.face-back{transform:rotateY(180deg);}
+.cover-img{
+  width:100%;height:100%;
+  object-fit:contain;
+  object-position:center center;
+  display:block;
+  background:#f9e4ec;
+}
+.hint{font-size:13px;color:#a07090;letter-spacing:0.4px;}
+.music-bar{
+  display:flex;align-items:center;gap:12px;
+  background:rgba(255,248,252,0.95);
+  border:0.5px solid #e8d0e0;border-radius:32px;
+  padding:8px 20px;font-size:12px;color:#a07090;
+  box-shadow:0 2px 12px rgba(180,80,130,0.08);
+}
+#play-btn{
+  background:#c45e8e;border:none;border-radius:50%;
+  width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;flex-shrink:0;transition:background 0.2s;
+}
+#play-btn:hover{background:#a8446e;}
+.wave{display:flex;align-items:center;gap:2px;height:20px;}
+.wb{width:3px;background:#c45e8e;border-radius:2px;animation:wv 1.1s ease-in-out infinite;opacity:0.2;transition:opacity 0.4s;}
+.wb.on{opacity:1;}
+.wb:nth-child(1){height:5px;animation-delay:0s;}
+.wb:nth-child(2){height:12px;animation-delay:0.15s;}
+.wb:nth-child(3){height:18px;animation-delay:0.3s;}
+.wb:nth-child(4){height:9px;animation-delay:0.45s;}
+.wb:nth-child(5){height:14px;animation-delay:0.1s;}
+.wb:nth-child(6){height:7px;animation-delay:0.25s;}
+@keyframes wv{0%,100%{transform:scaleY(0.4);}50%{transform:scaleY(1);}}
+</style>
+</head>
+<body>
+
+<audio id="bgm" loop preload="auto">
+  <source src="data:audio/mpeg;base64,SUQzBACAAAAfdkNPTU0AAAA7AAADZW5nAGh0dHA6Ly9zb3VuZGNsb3VkLmNvbS9hY2NvdSBDcmVhdGl2ZSBDb21tb25zIExpY2Vuc2VkAFRJVDIAAAAxAAADSi5TLiBCYWNoIC0gQ2VsbG8gU3VpdGUgTm8uMSBQcm..." type="audio/mpeg">
+</audio>
+<!-- rest of content here -->
+
+</body>
+</html>
